@@ -1,1 +1,9 @@
-Time to do some work
+#Summarize
+
+A simple solution to summarizing articles and documents.
+
+Currently trained on using Hillary Clinton's emails - So there is a higher weight towards political issues.
+
+The algorithm, however, can be applied and reused on many different articles.
+
+Currently supports summarization from URL or Raw Text data. Sentence puncuation is required. 

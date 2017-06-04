@@ -1,7 +1,6 @@
 import sqlite3
 
 class emails(object):
-
     def __init__(self):
         self.conn = sqlite3.connect('database.sqlite')
         self.cursor = self.conn.cursor()
@@ -12,6 +11,3 @@ class emails(object):
         for entry in temp:
             to_return.append(entry)
         return to_return
-
-test = emails()
-print test.get_emails()
