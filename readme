@@ -6,4 +6,14 @@ Currently trained on using Hillary Clinton's emails - So there is a higher weigh
 
 The algorithm, however, can be applied and reused on many different articles.
 
-Currently supports summarization from URL or Raw Text data. Sentence puncuation is required. 
+Currently supports summarization from URL or Raw Text data. Sentence punctuation is required.
+
+Uses a mongoDB database to query values for each word - this database is recommended to be on the same device as the codebase. The query time will be too large if DB is on an external source.
+
+Start a mongoDB instance out of the db folder and the program will 100% run.
+
+Currently Supported;
+Raw Text Files
+
+Possible Implementation:
+URL Article Parsing - CNN will be the test run.
