@@ -42,13 +42,14 @@ def generate_dict(text):
     return word_info_obj.entire_word_dict
 
 
-doc = sys.argv[1]
+if __name__ == '__main__':
+    doc = sys.argv[1]
 
-valu = {'http://www.cnn.com/2017/06/04/politics/donald-trump-london-terror-tweets/index.html' : 'text1',
-        'http://www.cnn.com/2017/06/05/politics/trump-comey-executive-privilege/index.html' : 'text2',
-        'http://money.cnn.com/2017/06/05/technology/gadgets/apple-wwdc-2017/index.html' : 'text3'}
+    valu = {'http://www.cnn.com/2017/06/04/politics/donald-trump-london-terror-tweets/index.html' : 'text1',
+            'http://www.cnn.com/2017/06/05/politics/trump-comey-executive-privilege/index.html' : 'text2',
+            'http://money.cnn.com/2017/06/05/technology/gadgets/apple-wwdc-2017/index.html' : 'text3'}
 
-doc = valu[doc]
+    doc = valu[doc]
 
-with open(doc, 'r') as document:
-    summarize(document.read(), 5)
+    with open(doc, 'r') as document:
+        summarize(document.read(), 5)
