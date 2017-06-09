@@ -2,13 +2,18 @@ from emails import emails
 import summarize
 import database
 
-email_list = emails()
 
-# for email in email_list.get_emails():
-email = str(email_list.get_emails()[1])
-email = email.replace('\\n', ' ')
+if __name__ == '__main__':
+    db_obj = database.database()
+    email_list = emails()
 
-word_dict = summarize.generate_dict(email)
+    counter = 0
 
-db_obj = database.database()
-db_obj.add_values(word_dict)
+    for email in email_list.get_emails():
+    # email = str(email_list.get_emails()[1])
+        email = str(email).replace('\\n', ' ')
+        word_dict = summarize.generate_dict(email)
+        db_obj.add_values(word_dict)
+
+        print 'email', counter, 'done'
+        counter += 1
